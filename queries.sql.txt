@@ -1,0 +1,10 @@
+select Customers.name , sum(Products.price* Order_Items.quantity) as total_Spent
+from Customers
+join Products on Products.id = Customers.id
+join Order_Items on Customers.id  = Order_Items.order_id
+join Orders on Customers.id = Orders.customer_id
+group by Customers.name
+order by total_Spent DESC
+--إجمالي المبيعات لكل عميل
+
+
