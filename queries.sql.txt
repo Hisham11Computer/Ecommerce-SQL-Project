@@ -5,6 +5,6 @@ join Order_Items on Customers.id  = Order_Items.order_id
 join Orders on Customers.id = Orders.customer_id
 group by Customers.name
 order by total_Spent DESC
---إجمالي المبيعات لكل عميل
+
 
 
